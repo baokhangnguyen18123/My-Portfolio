@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Bảo Khang | Software, Data &amp; Applied AI</title>
+    <meta
+      name="description"
+      content="Portfolio của Nguyễn Bảo Khang về phát triển phần mềm, phân tích nghiệp vụ, phân tích dữ liệu và Applied AI/LLM."
+    />
+    <meta name="author" content="Nguyễn Bảo Khang" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#EAE7D6" />
+    <meta
+      property="og:title"
+      content="Nguyễn Bảo Khang | Software, Data &amp; Applied AI"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio về phát triển phần mềm, phân tích nghiệp vụ, phân tích dữ liệu và Applied AI/LLM."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <!-- Add og:url and canonical after a production domain is confirmed. -->
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/theme-init.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="accessibility.skip"
+      >Bỏ qua điều hướng</a
+    >
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="./" data-i18n-aria-label="navigation.home">
+          <span class="brand-mark" aria-hidden="true">BK</span>
+          <span class="brand-name">Bảo Khang</span>
+          <span class="brand-dot" aria-hidden="true"></span>
+        </a>
+
+        <button
+          class="nav-toggle icon-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-nav-toggle
+          data-i18n-aria-label="navigation.open"
+        >
+          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+
+        <nav
+          class="primary-nav"
+          id="primary-navigation"
+          data-nav
+          data-i18n-aria-label="navigation.label"
+        >
+          <ul class="nav-list">
+            <li>
+              <a href="#about" data-nav-link data-i18n="navigation.about"
+                >Giới thiệu</a
+              >
+            </li>
+            <li>
+              <a href="#skills" data-nav-link data-i18n="navigation.skills"
+                >Kỹ năng</a
+              >
+            </li>
+            <li>
+              <a href="#projects" data-nav-link data-i18n="navigation.projects"
+                >Dự án</a
+              >
+            </li>
+            <li>
+              <a
+                href="#education"
+                data-nav-link
+                data-i18n="navigation.education"
+                >Học vấn</a
+              >
+            </li>
+            <li class="nav-contact-mobile">
+              <a href="#contact" data-nav-link data-i18n="navigation.contact"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions" data-header-actions>
+          <div
+            class="language-switcher"
+            role="group"
+            data-i18n-aria-label="language.label"
+          >
+            <button type="button" data-language="en" aria-pressed="false">
+              EN
+            </button>
+            <button type="button" data-language="vi" aria-pressed="true">
+              VI
+            </button>
+          </div>
+          <button
+            class="icon-button theme-toggle"
+            type="button"
+            data-theme-toggle
+            data-i18n-aria-label="theme.toDark"
+          >
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.4 15.3A8.5 8.5 0 0 1 8.7 3.6 8.5 8.5 0 1 0 20.4 15.3Z"
+              />
+            </svg>
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              />
+            </svg>
+          </button>
+          <a class="button button--small header-contact" href="#contact">
+            <span data-i18n="navigation.contact">Liên hệ</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <button
+      class="nav-backdrop"
+      type="button"
+      tabindex="-1"
+      aria-hidden="true"
+      data-nav-backdrop
+      data-i18n-aria-label="navigation.close"
+    ></button>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal="right">
+            <p class="availability">
+              <span aria-hidden="true"></span
+              ><span data-i18n="hero.availability"
+                >Sẵn sàng trao đổi về cơ hội phù hợp</span
+              >
+            </p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">
+              SOFTWARE · BUSINESS · DATA · APPLIED AI
+            </p>
+           
+            <p class="hero-intro" data-i18n="hero.intro">
+              Tôi là Nguyễn Bảo Khang. Tôi kết hợp phát triển phần mềm, phân
+              tích nghiệp vụ, tư duy dữ liệu và Applied AI/LLM để chuyển yêu cầu
+              thành giải pháp có thể triển khai.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button--outline cv-button"
+                href="assets/files/BusinessAnalyst-NguyenBaoKhang.pdf"
+                download="BusinessAnalyst-NguyenBaoKhang.pdf"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+                </svg>
+                <span data-i18n="hero.baCv">Business Analyst CV</span>
+              </a>
+              <a
+                class="button button--outline cv-button"
+                href="assets/files/Fresher.NETDeveloper-NguyenBaoKhang.pdf"
+                download="Fresher.NETDeveloper-NguyenBaoKhang.pdf"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+                </svg>
+                <span data-i18n="hero.dotnetCv">.NET Developer CV</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="hero-visual"
+            role="img"
+            data-reveal="right"
+            data-reveal-delay="1"
+            data-i18n-aria-label="hero.processLabel"
+          >
+            <div
+              class="visual-orbit visual-orbit--one"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="visual-orbit visual-orbit--two"
+              aria-hidden="true"
+            ></div>
+            <div class="visual-center">
+              <span class="visual-code" aria-hidden="true">&lt;/&gt;</span>
+              <strong>BẢO KHANG</strong>
+              <span>Software · Data · AI</span>
+            </div>
+            <ol class="process-list">
+              <li>
+                <span>01</span
+                ><strong data-i18n="hero.process.analyze">Phân tích</strong>
+              </li>
+              <li>
+                <span>02</span
+                ><strong data-i18n="hero.process.design">Thiết kế</strong>
+              </li>
+              <li>
+                <span>03</span
+                ><strong data-i18n="hero.process.build">Xây dựng</strong>
+              </li>
+              <li>
+                <span>04</span
+                ><strong data-i18n="hero.process.measure">Đo lường</strong>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="container about-grid">
+          <div class="section-heading" data-reveal="right">
+            <p class="section-index" data-i18n="about.index">01 · GIỚI THIỆU</p>
+            <h2 id="about-title" data-i18n="about.title">
+              Tôi chuyển yêu cầu vận hành thành giải pháp phần mềm thực tế.
+            </h2>
+          </div>
+          <div class="about-content">
+            <p class="section-lead" data-i18n="about.lead">
+              Tôi kết hợp tư duy phân tích hệ thống với hiểu biết dữ liệu để làm
+              rõ vấn đề trước khi chọn giải pháp. Mục tiêu là tạo ra sản phẩm dễ
+              hiểu, có thể triển khai và đo lường.
+            </p>
+            <div class="pillar-grid">
+              <article class="pillar" data-reveal="right">
+                <span>01</span>
+                <h3 data-i18n="about.system.title">Phân tích hệ thống</h3>
+                <p data-i18n="about.system.text">
+                  Làm rõ quy trình, tác nhân, dữ liệu và yêu cầu trước khi triển
+                  khai.
+                </p>
+              </article>
+              <article class="pillar" data-reveal="right" data-reveal-delay="1">
+                <span>02</span>
+                <h3 data-i18n="about.data.title">Tư duy dữ liệu</h3>
+                <p data-i18n="about.data.text">
+                  Nhìn nhận phần mềm cùng dữ liệu mà hệ thống tạo ra và sử dụng.
+                </p>
+              </article>
+              <article class="pillar" data-reveal="right" data-reveal-delay="2">
+                <span>03</span>
+                <h3 data-i18n="about.delivery.title">Triển khai thực tế</h3>
+                <p data-i18n="about.delivery.text">
+                  Ưu tiên giải pháp phù hợp với luồng vận hành và khả năng bảo
+                  trì.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section skills-section"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="section-heading section-heading--wide" data-reveal="right">
+            <p class="section-index" data-i18n="skills.index">02 · NĂNG LỰC</p>
+            <h2 id="skills-title" data-i18n="skills.title">
+              Nền tảng phù hợp để phát triển sản phẩm số hiện đại.
+            </h2>
+            <p class="section-lead" data-i18n="skills.lead">
+              Từ phát triển web và phân tích dữ liệu đến LLM ứng dụng, tôi chọn
+              công cụ dựa trên bài toán và luồng dữ liệu cần xử lý.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card" data-reveal="right">
+              <span class="card-icon" aria-hidden="true">&lt;/&gt;</span>
+              <h3 data-i18n="skills.languages">Ngôn ngữ &amp; nền tảng</h3>
+              <ul
+                class="badge-list"
+                aria-label="C#, Python, JavaScript, HTML/CSS"
+              >
+                <li>C#</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </article>
+            <article class="skill-card" data-reveal="right" data-reveal-delay="1">
+              <span class="card-icon" aria-hidden="true">⌘</span>
+              <h3 data-i18n="skills.frameworks">Framework &amp; thư viện</h3>
+              <ul
+                class="badge-list"
+                aria-label="ASP.NET Core, ASP.NET MVC, Blazor, Entity Framework, Bootstrap, jQuery"
+              >
+                <li>ASP.NET Core</li>
+                <li>ASP.NET MVC</li>
+                <li>Blazor</li>
+                <li>Entity Framework</li>
+                <li>Bootstrap</li>
+                <li>jQuery</li>
+              </ul>
+            </article>
+            <article class="skill-card" data-reveal="right" data-reveal-delay="2">
+              <span class="card-icon" aria-hidden="true">◫</span>
+              <h3 data-i18n="skills.storage">Dữ liệu &amp; lưu trữ</h3>
+              <ul
+                class="badge-list"
+                aria-label="SQL Server, T-SQL, LINQ, MongoDB, Pinecone"
+              >
+                <li>SQL Server</li>
+                <li>T-SQL</li>
+                <li>LINQ</li>
+                <li>MongoDB</li>
+                <li>Pinecone</li>
+              </ul>
+            </article>
+            <article class="skill-card" data-reveal="right" data-reveal-delay="3">
+              <span class="card-icon" aria-hidden="true">◇</span>
+              <h3 data-i18n="skills.tools">Công cụ &amp; phương pháp</h3>
+              <ul
+                class="badge-list"
+                aria-label="Docker, Git, Microsoft Office, Business Analysis, Agile"
+              >
+                <li>Docker</li>
+                <li>Git</li>
+                <li>Microsoft Office</li>
+                <li>Business Analysis</li>
+                <li>Agile</li>
+              </ul>
+            </article>
+            <article class="skill-card" data-reveal="right" data-reveal-delay="4">
+              <span class="card-icon" aria-hidden="true">▥</span>
+              <h3 data-i18n="skills.analysis">Phân tích dữ liệu</h3>
+              <ul
+                class="badge-list"
+                aria-label="Pandas, NumPy, Matplotlib, Jupyter Notebook, Data Visualization, Power BI"
+              >
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+                <li>Jupyter Notebook</li>
+                <li>Data Visualization</li>
+                <li>Power BI</li>
+              </ul>
+            </article>
+            <article class="skill-card" data-reveal="right" data-reveal-delay="5">
+              <span class="card-icon" aria-hidden="true">✦</span>
+              <h3 data-i18n="skills.ai">LLM &amp; Applied AI</h3>
+              <ul
+                class="badge-list"
+                aria-label="LangChain, RAG, Prompt Engineering, NLP, Pinecone"
+              >
+                <li>LangChain</li>
+                <li>RAG</li>
+                <li>Prompt Engineering</li>
+                <li>NLP</li>
+                <li>Pinecone</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section projects-section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-heading section-heading--wide" data-reveal="right">
+            <p class="section-index" data-i18n="projects.index">
+              03 · DỰ ÁN NỔI BẬT
+            </p>
+            <h2 id="projects-title" data-i18n="projects.title">
+              Giải quyết bài toán quản lý vận hành cho trang trại và cửa hàng
+              thức ăn chăn nuôi.
+            </h2>
+            <p class="section-lead" data-i18n="projects.lead">
+              Tập trung vào cấu trúc nghiệp vụ, quản lý dữ liệu và trải nghiệm
+              thao tác rõ ràng.
+            </p>
+          </div>
+
+          <article class="project-card" data-reveal="right">
+            <div class="project-visual">
+              <img
+                src="assets/images/stockfarm-erp.svg"
+                alt="Minh họa giao diện dashboard của stockfarm-erp"
+                data-i18n-alt="projects.imageAlt"
+                width="760"
+                height="520"
+              />
+            </div>
+            <div class="project-copy">
+              <p class="project-type" data-i18n="projects.type">
+                ERP SYSTEM · ASP.NET CORE
+              </p>
+              <h3>stockfarm-erp</h3>
+              <p data-i18n="projects.description">
+                Hệ thống ERP quản lý cửa hàng thức ăn chăn nuôi và trang trại,
+                được tổ chức theo nghiệp vụ và quy trình phát triển Agile.
+              </p>
+              <ul
+                class="badge-list project-tags"
+                aria-label="ASP.NET Core, Blazor, SQL Server, Entity Framework, Agile"
+              >
+                <li>ASP.NET Core</li>
+                <li>Blazor</li>
+                <li>SQL Server</li>
+                <li>Entity Framework</li>
+                <li>Agile</li>
+              </ul>
+              <div class="project-actions">
+                <button
+                  class="text-button"
+                  type="button"
+                  data-modal-open="project-modal"
+                >
+                  <span data-i18n="projects.details">Xem chi tiết dự án</span
+                  ><span aria-hidden="true">↗</span>
+                </button>
+                <span class="update-status" data-i18n="projects.demoPending"
+                  >Demo đang cập nhật</span
+                >
+                <span class="update-status" data-i18n="projects.repoPending"
+                  >Repository đang cập nhật</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section education-section"
+        id="education"
+        aria-labelledby="education-title"
+      >
+        <div class="container education-grid">
+          <div class="section-heading" data-reveal="right">
+            <p class="section-index" data-i18n="education.index">
+              04 · HỌC VẤN
+            </p>
+            <h2 id="education-title" data-i18n="education.title">
+              Cử nhân Công nghệ thông tin, chuyên ngành Khoa học dữ liệu.
+            </h2>
+            <p class="section-lead">
+              <span data-i18n="education.school">Đại Học Ngoại ngữ Tin học TP HCM</span>
+              · 2021–2025
+            </p>
+          </div>
+          <article class="education-card" data-reveal="right" data-reveal-delay="1">
+            <span class="education-icon" aria-hidden="true">⌁</span>
+            <div>
+              <p class="education-degree" data-i18n="education.degree">
+                Cử nhân Công nghệ thông tin · Chuyên ngành Khoa học dữ liệu
+              </p>
+              <p data-i18n="education.school">Đại Học Ngoại ngữ Tin học TP HCM</p>
+            </div>
+            <dl class="education-meta">
+              <div>
+                <dt data-i18n="education.periodLabel">Thời gian</dt>
+                <dd>2021–2025</dd>
+              </div>
+              <div>
+                <dt data-i18n="education.gpaLabel">GPA / Xếp loại</dt>
+                <dd>3.2 / <strong>Distinction</strong></dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <div class="contact-frame">
+            <span class="contact-orbit contact-orbit--large" aria-hidden="true"></span>
+            <span class="contact-orbit contact-orbit--small" aria-hidden="true"></span>
+
+            <div class="contact-grid">
+              <div class="contact-intro" data-reveal="right">
+                <p class="section-index" data-i18n="contact.index">05 · KẾT NỐI</p>
+                <p class="contact-kicker">
+                  <span aria-hidden="true"></span>
+                  <span data-i18n="contact.directLabel">Kênh liên hệ trực tiếp</span>
+                </p>
+                <h2 id="contact-title" data-i18n="contact.title">
+                  Cùng trao đổi về một cơ hội phù hợp.
+                </h2>
+                <p class="contact-lead" data-i18n="contact.lead">
+                  Tôi sẵn sàng trao đổi về phát triển phần mềm, phân tích nghiệp vụ,
+                  dữ liệu hoặc một bài toán Applied AI cần được triển khai rõ ràng.
+                </p>
+                <a
+                  class="button button--light"
+                  href="mailto:BaoKhang18123@gmail.com"
+                >
+                  <span data-i18n="contact.emailMe">Gửi email cho tôi</span
+                  ><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <div
+                class="contact-list"
+                data-i18n-aria-label="contact.channelsLabel"
+              >
+                <button
+                  class="contact-item contact-item--email"
+                  type="button"
+                  data-reveal="right"
+                  data-copy-email="BaoKhang18123@gmail.com"
+                >
+                  <span class="contact-number" aria-hidden="true">01</span>
+                  <span class="contact-icon" aria-hidden="true">@</span>
+                  <span class="contact-details">
+                    <small>Email</small>
+                    <strong>BaoKhang18123@gmail.com</strong>
+                  </span>
+                  <span class="contact-item-meta" data-i18n="contact.copyHint">Nhấn để sao chép</span>
+                  <span class="contact-action" aria-hidden="true">⧉</span>
+                </button>
+
+                <a
+                  class="contact-item contact-item--github"
+                  href="https://github.com/baokhangnguyen18123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-reveal="right"
+                  data-reveal-delay="1"
+                >
+                  <span class="contact-number" aria-hidden="true">02</span>
+                  <span class="contact-icon" aria-hidden="true">GH</span>
+                  <span class="contact-details">
+                    <small>GitHub</small>
+                    <strong>baokhangnguyen18123</strong>
+                  </span>
+                  <span class="contact-item-meta" data-i18n="contact.githubHint">Mở hồ sơ</span>
+                  <span class="contact-action" aria-hidden="true">↗</span>
+                </a>
+
+                <div class="contact-item contact-item--location" data-reveal="right" data-reveal-delay="2">
+                  <span class="contact-number" aria-hidden="true">03</span>
+                  <span class="contact-icon" aria-hidden="true">HCM</span>
+                  <span class="contact-details">
+                    <small data-i18n="contact.locationLabel">Địa điểm</small>
+                    <strong>Ho Chi Minh City</strong>
+                  </span>
+                  <span class="contact-item-meta" data-i18n="contact.locationHint">Địa điểm hiện tại</span>
+                  <span class="contact-action" aria-hidden="true">•</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-current-year></span> Nguyễn Bảo Khang.</p>
+
+        <a href="./"
+          ><span data-i18n="footer.backToTop">Về đầu trang</span>
+          <span aria-hidden="true">↑</span></a
+        >
+      </div>
+    </footer>
+
+    <div
+      class="modal"
+      id="project-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-modal-title"
+      aria-describedby="project-modal-description"
+      aria-hidden="true"
+      data-modal
+      inert
+    >
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel" role="document" tabindex="-1" data-modal-panel>
+        <button
+          class="icon-button modal-close"
+          type="button"
+          data-modal-close
+          data-i18n-aria-label="modal.close"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <p class="project-type" data-i18n="projects.type">
+          ERP SYSTEM · ASP.NET CORE
+        </p>
+        <h2 id="project-modal-title">stockfarm-erp</h2>
+        <p
+          id="project-modal-description"
+          class="modal-intro"
+          data-i18n="modal.intro"
+        >
+          Hệ thống hỗ trợ quản lý dữ liệu và quy trình vận hành cho cửa hàng
+          thức ăn chăn nuôi và trang trại.
+        </p>
+        <div class="modal-details">
+          <section>
+            <h3 data-i18n="modal.problemTitle">Bài toán</h3>
+            <p data-i18n="modal.problemText">
+              Tập trung thông tin vận hành, giảm thao tác rời rạc và giúp các
+              luồng quản lý hàng hóa, trang trại và dữ liệu liên quan rõ ràng
+              hơn.
+            </p>
+          </section>
+          <section>
+            <h3 data-i18n="modal.contributionTitle">Đóng góp</h3>
+            <p data-i18n="modal.contributionText">
+              Phân tích nghiệp vụ, tổ chức luồng xử lý, thiết kế dữ liệu và xây
+              dựng các chức năng web trong phạm vi dự án.
+            </p>
+          </section>
+          <section>
+            <h3 data-i18n="modal.approachTitle">Cách tiếp cận</h3>
+            <p data-i18n="modal.approachText">
+              Chia nhỏ yêu cầu theo luồng nghiệp vụ, xây dựng từng phần theo quy
+              trình Agile và ưu tiên khả năng sử dụng, bảo trì.
+            </p>
+          </section>
+          <section>
+            <h3 data-i18n="modal.technologyTitle">Công nghệ</h3>
+            <ul class="badge-list">
+              <li>ASP.NET Core</li>
+              <li>Blazor</li>
+              <li>SQL Server</li>
+              <li>Entity Framework</li>
+              <li>Agile</li>
+            </ul>
+          </section>
+        </div>
+        <div class="modal-status">
+          <span data-i18n="projects.demoPending">Demo đang cập nhật</span>
+          <span data-i18n="projects.repoPending">Repository đang cập nhật</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      data-toast
+    ></div>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

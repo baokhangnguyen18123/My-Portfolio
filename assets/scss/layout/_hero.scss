@@ -1,0 +1,200 @@
+@use '../abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  display: grid;
+  min-height: calc(100svh - 5.25rem);
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  z-index: 0;
+  border: 1px solid color-mix(in srgb, var(--color-border), transparent 25%);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.hero::before {
+  top: -18rem;
+  right: -16rem;
+  width: 42rem;
+  height: 42rem;
+}
+
+.hero::after {
+  right: -7rem;
+  bottom: -22rem;
+  width: 34rem;
+  height: 34rem;
+  opacity: 0.65;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+}
+
+.hero-copy {
+  display: grid;
+  justify-items: start;
+  gap: 1.6rem;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  margin: 0;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.availability span:first-child {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--color-secondary), transparent 22%);
+}
+
+.hero-copy h1 {
+  max-width: 11ch;
+}
+
+.hero-intro {
+  max-width: 40rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.cv-button {
+  font-size: 0.83rem;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 30rem;
+  isolation: isolate;
+}
+
+.visual-orbit {
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--color-on-dark), transparent 20%);
+  border-radius: 2.5rem;
+  background: var(--color-secondary);
+  transform: rotate(-8deg);
+}
+
+.visual-orbit--one {
+  inset: 7% 8% 13% 9%;
+  opacity: 0.75;
+}
+
+.visual-orbit--two {
+  inset: 12% 2% 8% 15%;
+  border-radius: 3rem;
+  background: color-mix(in srgb, var(--color-secondary), var(--color-accent) 38%);
+  transform: rotate(7deg);
+}
+
+.visual-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: clamp(12rem, 23vw, 16rem);
+  aspect-ratio: 1;
+  place-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  border: 1.1rem solid color-mix(in srgb, var(--color-secondary), var(--color-inverse) 55%);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-inverse);
+  text-align: center;
+  transform: translate(-50%, -54%);
+  box-shadow: 0 1rem 2rem var(--color-shadow);
+}
+
+.visual-center strong {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  letter-spacing: 0.12em;
+}
+
+.visual-center > span:last-child {
+  font-size: 0.67rem;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.visual-code {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.process-list {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-surface), transparent 8%);
+  list-style: none;
+  box-shadow: 0 1rem 2rem var(--color-shadow);
+}
+
+.process-list li {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.process-list span {
+  color: var(--color-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.process-list strong {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.95rem;
+}
+
+@include mq(lg) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(25rem, 0.9fr); }
+}
+
+@media (max-width: 47.99rem) {
+  .hero-grid { gap: 3.5rem; }
+  .hero-copy h1 { max-width: 12ch; }
+  .hero-visual { min-height: 23rem; }
+  .process-list { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+}

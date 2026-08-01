@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+@media (max-width: 26rem) {
+  .container { width: min(calc(100% - 1.25rem), $content-max); }
+  .hero-actions { display: grid; width: 100%; }
+  .hero-actions .button { width: 100%; }
+  .header-contact { display: none; }
+  .language-switcher { margin-left: auto; }
+  .education-meta { grid-template-columns: 1fr; }
+  .project-actions { align-items: flex-start; flex-direction: column; }
+}

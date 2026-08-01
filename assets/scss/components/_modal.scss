@@ -1,0 +1,92 @@
+@use '../abstracts/mixins' as *;
+
+html.nav-open,
+html.modal-open,
+body.nav-open,
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  display: grid;
+  padding: 1rem;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.modal[aria-hidden='false'] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 29, 23, 0.72);
+}
+
+.modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 50rem);
+  max-height: min(90svh, 48rem);
+  overflow-y: auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  transform: translateY(1rem) scale(0.98);
+  transition: transform var(--transition);
+}
+
+.modal[aria-hidden='false'] .modal-panel { transform: translateY(0) scale(1); }
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-panel h2 {
+  margin-top: 0.7rem;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+}
+
+.modal-intro {
+  max-width: 42rem;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+.modal-details {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.modal-details section {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.modal-details h3 { font-size: 1rem; }
+.modal-details p { font-size: 0.9rem; }
+
+.modal-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+@include mq(md) {
+  .modal-details { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+}
