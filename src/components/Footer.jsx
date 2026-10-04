@@ -15,9 +15,12 @@ export default function Footer({ t }) {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-left">
-          <p className="copyright-text">
-            © {currentYear} {t.footer.copyright}
-          </p>
+          <div className="footer-brand-row">
+            <img src="assets/images/logo.jpg" alt="Dino Lab" className="footer-logo-img" />
+            <p className="copyright-text">
+              © {currentYear} {t.footer.copyright}
+            </p>
+          </div>
           <p className="footer-tech-tag">{t.footer.builtWith}</p>
         </div>
 

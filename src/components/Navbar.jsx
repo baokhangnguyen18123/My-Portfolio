@@ -54,8 +54,8 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t }) {
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <div className="container header-inner">
         <a href="#hero" className="brand" aria-label="Nguyen Bao Khang Portfolio">
-          <div className="brand-badge">
-            <span>BK</span>
+          <div className="brand-logo-wrapper">
+            <img src="assets/images/logo.jpg" alt="Dino Lab" className="brand-logo-img" />
           </div>
           <span className="brand-name">
             Bảo Khang<span className="brand-dot">.</span>
