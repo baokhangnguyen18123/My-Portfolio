@@ -6,7 +6,7 @@
   "description": "Static bilingual portfolio for Nguyen Bao Khang",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-static.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
