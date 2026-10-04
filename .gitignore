@@ -4,3 +4,5 @@ npm-debug.log*
 Thumbs.db
 .vscode/
 assets/css/*.map
+dist/
+

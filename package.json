@@ -5,11 +5,20 @@
   "type": "module",
   "description": "Static bilingual portfolio for Nguyen Bao Khang",
   "scripts": {
-    "sass:watch": "sass --watch assets/scss/main.scss:assets/css/main.css",
-    "sass:build": "sass --style=compressed --no-source-map assets/scss/main.scss:assets/css/main.css",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "serve": "node scripts/serve.js"
   },
   "devDependencies": {
     "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.51.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.11"
   }
 }
